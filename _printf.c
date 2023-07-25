@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 				case 'd':
 				case 'i':
 					len += print_int(list);
+					break;
 				default:
 					len += write(1, format, 1);
 					break;
