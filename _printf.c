@@ -21,6 +21,9 @@ int _printf(const char *format, ...)
 				case 's':
 					len += print_string(list);
 					break;
+				case 'c':
+					len += print_char(list);
+					break;
 				default:
 					len += write(1, format, 1);
 					break;
