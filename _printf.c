@@ -5,15 +5,19 @@
 * @format: character
 * Return: number of characters
 */
+
 int _printf(const char *format, ...)
 {
-  va_list list;
+	va_list list;
 	int len = 0;
 
 	va_start(list, format);
+	if (format == NULL)
+		return (-1);
+
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *format != '\0')
 		{
 			format++;
 			switch (*format)
@@ -41,7 +45,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-
 	va_end(list);
 
 	return (len);
