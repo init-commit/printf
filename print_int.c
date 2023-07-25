@@ -5,10 +5,11 @@
  * @list: number of parameters
  * Return: success
  */
+
 int print_int(va_list list)
 {
 	char buffer[12];
-	int length = 0, temp, i , num;
+	int length = 0, temp, i, num;
 
 	num = va_arg(list, int);
 
